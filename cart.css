@@ -1,0 +1,24 @@
+#cart-total-price {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 5px;
+}
+
+#cart-form-left,
+#cart-form-right {
+    margin: 10px;
+    padding: 10px;
+    border-radius: var(--cart-form-radius);
+    border: var(--cart-form-border);
+    background: var(--cart-form-bg);
+}
+
+#cart-content {
+    position: relative;
+    margin: 5px;
+    overflow-y: scroll;
+    max-width: 1150px;
+    max-height: 550px;
+    border: var(--cart-border)
+}

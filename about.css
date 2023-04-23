@@ -1,0 +1,19 @@
+.about-img {
+  width: 0;
+  max-width: 800px;
+  height: 0;
+  border-radius: 10px;
+  opacity: var(--about-img-opacity);
+  margin: 0;
+  transition: .1s;
+  background: rgb(204, 204, 204);
+}
+
+.about-text {
+  width: 100%;
+  max-width: var(--about-text-width);
+  text-align: justify;
+  font-size: var(--about-text-font-size);
+  margin: 5px;
+  transition: .1s;
+}

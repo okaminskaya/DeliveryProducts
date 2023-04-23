@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <title>Доставка продуктов</title>
+  </head>
+  <body>
+    <header id="header">
+      <div id="header-content">
+        <div id="header-logo">
+          <i class="fa-solid fa-apple-whole"></i>
+          <!-- <i class="fa-solid fa-apple-whole apple-icon"></i> -->
+        </div>
+        <div id="header-nav">
+          <a class="header-nav-item" href="./index.html">Главная</a>
+          <a class="header-nav-item is-active">Товары</a>
+          <a class="header-nav-item" href="./сart.html">Корзина</a>
+          <a class="header-nav-item" href="./about.html">О нас</a>
+          <a class="header-nav-item special" href="./mode.html">Особый режим</a>
+          <a class="header-nav-item" href="./admin.html">Админ панель</a>
+        </div>
+      </div>
+    </header>
+
+    <div id="search-container">
+      <input
+        id="main-search"
+        onkeyup="searchProduct()"
+        type="text"
+        placeholder="Искать товар по названию..."
+      />
+      <button id="start"><i class="fa-solid fa-microphone"></i></button>
+    </div>
+
+    <div id="category-selected">
+      <!-- <button id="in-discount-btn">Товары по скидке</button> -->
+      <select
+        id="main-product-category"
+        onchange="searchCategory()"
+        name="select"
+      >
+        <option value="">Выбрать категорию</option>
+        <option value="Овощи, фрукты, сухофрукты">
+          Овощи, фрукты, сухофрукты
+        </option>
+        <option value="Рыба, икра, морепродукты">
+          Рыба, икра, морепродукты
+        </option>
+        <option value="Хлебобулочные изделия, выпечка">
+          Хлебобулочные изделия, выпечка
+        </option>
+        <option value="Чай, кофе">Чай, кофе</option>
+        <option value="Конндитерские изделия">Конндитерские изделия</option>
+        <option value="Молочная продукция">Молочная продукция</option>
+        <option value="Колбасы и мясная продукция">
+          Колбасы и мясная продукция
+        </option>
+      </select>
+    </div>
+    <div id="card-content"></div>
+
+    <footer class="footer">
+      <div class="footer-title">Магазин доставки продуктов 2023</div>
+    </footer>
+    <script>
+      Parse.initialize(
+        "2ns4fegLoIp805FKMS52bnEZAXejepfBmBuEHrbe",
+        "GpZ4eK5qmsidp6V5hcT8vwQGRK7Xz72mah0XD9Kp"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+    <script src="./browse.js"></script>
+  </body>
+</html>

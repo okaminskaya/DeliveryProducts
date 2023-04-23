@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://npmcdn.com/parse/dist/parse.min.js"
+    ></script>
+    <title>Доставка продуктов - Корзина</title>
+  </head>
+  <body>
+    <header id="header">
+      <div id="header-content">
+        <div id="header-logo">
+          <i class="fa-solid fa-apple-whole"></i>
+          <!-- <i class="fa-solid fa-apple-whole apple-icon"></i> -->
+        </div>
+        <div id="header-nav">
+          <a class="header-nav-item" href="./index.html">Главная</a>
+          <a class="header-nav-item" href="./browse.html">Товары</a>
+          <a class="header-nav-item is-active">Корзина</a>
+          <a class="header-nav-item" href="./about.html">О нас</a>
+          <a class="header-nav-item special" href="./mode.html">Особый режим</a>
+          <a class="header-nav-item" href="./admin.html">Админ панель</a>
+        </div>
+      </div>
+    </header>
+
+    <h1 class="title">Ваши товары</h1>
+    <div id="cart-total-price"></div>
+    <div class="groups"><div id="cart-content" class="content"></div></div>
+
+    <div class="content">
+      <h1 class="title">Оформить заказ</h1>
+
+      <div id="cart-form-left">
+        <div class="input-content">
+          <label>Адрес доставки</label>
+          <input
+            id="cart-adress"
+            class="cart-input"
+            type="text"
+            placeholder="Введите адрес доставки..."
+          />
+        </div>
+        <div class="input-content">
+          <label>Улица</label>
+          <input
+            id="cart-street"
+            class="cart-input"
+            type="text"
+            placeholder="Введите улицу..."
+          />
+        </div>
+        <div class="input-content">
+          <label>Дом</label>
+          <input
+            id="cart-house"
+            class="cart-input"
+            type="text"
+            placeholder="Введите номер дома..."
+          />
+        </div>
+        <div class="input-content">
+          <label>Подъезд</label>
+          <input
+            id="cart-entrance"
+            class="cart-input"
+            type="text"
+            placeholder="Введите номер подъезда..."
+          />
+        </div>
+      </div>
+      <div id="cart-form-right">
+        <div class="input-content">
+          <label>Квартира</label>
+          <input
+            id="cart-house-num"
+            class="cart-input"
+            type="text"
+            placeholder="Введите номер квартиры..."
+          />
+        </div>
+        <div class="input-content">
+          <label>Название места</label>
+          <input
+            id="cart-place"
+            class="cart-input"
+            type="text"
+            placeholder="Введите название места..."
+          />
+        </div>
+        <div class="input-content">
+          <label>Номер телефона</label>
+          <input
+            id="cart-phone"
+            class="cart-input"
+            type="text"
+            placeholder="Введите номер телефона..."
+          />
+        </div>
+        <div class="input-content">
+          <label>Комментарий</label>
+          <input
+            id="cart-comment"
+            class="cart-input"
+            type="text"
+            placeholder="Комментарий..."
+          />
+        </div>
+      </div>
+
+      <div class="btn-content">
+        <button id="order-accept" class="btn-buy">Подтвердить покупку</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-title">Магазин доставки продуктов 2023</div>
+    </footer>
+
+    <script src="./cart.js" type="module"></script>
+    <script>
+      Parse.initialize(
+        "2ns4fegLoIp805FKMS52bnEZAXejepfBmBuEHrbe",
+        "GpZ4eK5qmsidp6V5hcT8vwQGRK7Xz72mah0XD9Kp"
+      );
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
+  </body>
+</html>

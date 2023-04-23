@@ -1,0 +1,112 @@
+#search-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.center {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1235px;
+    padding: 10px;
+}
+
+.center.min{
+    max-width: 800px;
+}
+
+#main-search {
+    width: 100%;
+    max-width: 350px;
+    border-radius: var(--search-border-radius);
+    font-size: 15px;
+    border: var(--search-border);
+    padding: 12px 15px;
+}
+
+#main-search:hover, #main-search:focus {
+    outline-offset: var(--outline-offset);
+    outline: var(--outline);
+}
+
+#start {
+    position: relative;
+    border: var(--search-border);
+    border-radius: var(--search-border-radius);
+    margin-left: 5px;
+    margin-top: 1px;
+    width: 43px;
+    height: 43px;
+    text-align: center;
+}
+
+#start.active {
+    color: white;
+    background: rgb(255, 0, 0);
+}
+
+.fa-microphone {
+    position: relative;
+    font-size: 20px;
+    left: 1px;
+}
+
+#category-selected {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1235px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+}
+
+#in-discount-btn, #main-product-category {
+    border-radius: var(--category-border-radius);
+    padding: 5px 5px;
+    border: var(--category-border);
+    background: var(--category-bg);
+}
+
+#main-product-category:hover, #main-product-category:focus {
+    outline-offset: var(--outline-offset);
+    outline: var(--outline);
+}
+
+#card-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 1264px;
+    margin: 0 auto;
+}
+
+.fa-eye{
+    padding-left: 15px;
+    font-size: 30px;
+}
+
+.mode-list{
+    font-size: 19px;
+}
+
+.mode-list li{
+    padding-bottom: 10px;
+}
+
+.blind-mode-btn{
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 12px 22px;
+    font-size: 20px;
+    background: rgb(226, 6, 39);
+}
+
+.blind-mode-btn.enabled{
+    background: green;
+}
+
+.blind-mode-btn:hover, .blind-mode-btn:focus {
+    outline-offset: var(--outline-offset);
+    outline: var(--outline);
+}
